@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bcbadbb-33ba-410a-a95d-e52b5861648f" name="Changes" comment="First commit">
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ru/netology/MainKtTest.kt" afterDir="false" />
+    <list default="true" id="0bcbadbb-33ba-410a-a95d-e52b5861648f" name="Changes" comment="Commit with correct test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/MainKtTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ru/netology/MainKtTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ru/netology/MainKtTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,11 +58,12 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="gradle test" />
       <command value="gradle :test" />
+      <command value="gradle test" />
+      <command value="gradle jacocoTestReport" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.kt_hw_functions [:test]">
+  <component name="RunManager" selected="Gradle.kt_hw_functions [jacocoTestReport]">
     <configuration name="kt_hw_functions [:test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -76,6 +76,27 @@
         <option name="taskNames">
           <list>
             <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="kt_hw_functions [jacocoTestReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jacocoTestReport" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -108,8 +129,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.kt_hw_functions [:test]" />
         <item itemvalue="Gradle.kt_hw_functions [test]" />
+        <item itemvalue="Gradle.kt_hw_functions [jacocoTestReport]" />
+        <item itemvalue="Gradle.kt_hw_functions [:test]" />
       </list>
     </recent_temporary>
   </component>
@@ -129,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684423220406</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit with correct test">
+      <created>1684424171300</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684424171300</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,6 +174,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+    <MESSAGE value="Commit with correct test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit with correct test" />
   </component>
 </project>
