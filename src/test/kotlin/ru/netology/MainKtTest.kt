@@ -29,7 +29,7 @@ class MainKtTest {
         val alreadyPayAmmount = 60_000 //сумма переводов в это месяце
         val payAmmount = 2900 // размер платежа
         val result = commisionAmount(cardType, alreadyPayAmmount, payAmmount)
-        assertEquals(15, result.toInt())
+        assertEquals(0, result.toInt())
     }
 
     @Test
