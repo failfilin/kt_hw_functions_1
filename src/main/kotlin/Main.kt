@@ -2,22 +2,25 @@ fun main() {
     val cardType = "Maestro" // тип карты/счета при переводе
     val alreadyPayAmmount = 600_000 //сумма переводов в это месяце
     val payAmmount = 1500 // размер платежа
+
+    val result = limitCheck(cardType, alreadyPayAmmount, payAmmount)
+    println(result)
+
+}
+
+fun limitCheck(cardType: String = "VK Pay", alreadyPayAmount: Int = 0, payAmount: Int): String {
     val vkOnesLimit = 15_000// размер лимита на разовый платеж ВК
     val vkMonthLimit = 40_000// размер на месячные платежи для вк
     val otherOnesLimit = 150_000 // размер на разовый платеж для всех систем
     val otherMonthLimit = 600_000 // размер на месячные платежи для остальных систем
-    when {
-        cardType == "VK Pay" && (alreadyPayAmmount + payAmmount) > vkMonthLimit || cardType == "VK Pay" && payAmmount > vkOnesLimit -> println(
-            "Превышены лимиты"
-        )
+    return when {
+        cardType == "VK Pay" && (alreadyPayAmount + payAmount) > vkMonthLimit || cardType == "VK Pay" && payAmount > vkOnesLimit -> "Превышены лимиты"
 
-        cardType != "VK Pay" && (alreadyPayAmmount + payAmmount) > otherMonthLimit || cardType != "VK Pay" && payAmmount > otherOnesLimit -> println(
+        cardType != "VK Pay" && (alreadyPayAmount + payAmount) > otherMonthLimit || cardType != "VK Pay" && payAmount > otherOnesLimit ->
             "Превышены лимиты"
-        )
 
-        else -> println("Размер комиссии равен ${commisionAmount(cardType, alreadyPayAmmount, payAmmount)}")
+        else -> "Размер комиссии равен ${commisionAmount(cardType, alreadyPayAmount, payAmount)}"
     }
-
 }
 
 fun commisionAmount(cardType: String = "VK Pay", alreadyPayAmount: Int = 0, payAmount: Int): Double {
